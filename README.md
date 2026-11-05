@@ -1,72 +1,94 @@
-# Task Management API
 
-A RESTful Task Management API built using Node.js, Express.js and MongoDB.
+# TaskFlow - Task Management Application
+
+A responsive task management application built using React. It connects to a REST API built with Node.js, Express.js and MongoDB.
 
 ## Features
 
 - User registration and login
-- Password hashing using bcrypt
-- JWT authentication
-- Create, read, update and delete tasks
-- User-specific task management
-- Input validation
-- Proper HTTP status codes
+- JWT-based authentication
+- Protected routes
+- Create new tasks
+- View all tasks
+- View individual task details
+- Edit existing tasks
+- Delete tasks
+- Task status management
+- Loading and error states
+- Responsive design
 
 ## Technologies Used
 
+### Frontend
+- React.js
+- JavaScript
+- React Router DOM
+- HTML
+- CSS
+- Fetch API
+
+### Backend
 - Node.js
 - Express.js
-- MongoDB Atlas
+- MongoDB
 - Mongoose
-- bcryptjs
-- JSON Web Token
+- JWT Authentication
 
 ## Installation
 
-1. Clone the repository.
-2. Install dependencies:
+1. Clone this repository.
 
-   `npm install`
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
 
-3. Create a `.env` file:
+2. Navigate to the frontend directory.
 
-   `PORT=5000`
+```bash
+cd task-management-frontend
+```
 
-   `MONGODB_URI=your_mongodb_connection_string`
+3. Install dependencies.
 
-   `JWT_SECRET=your_secret_key`
+```bash
+npm install
+```
 
-   `JWT_EXPIRES_IN=1d`
+4. Create a `.env` file in the frontend root directory.
 
-4. Start the application:
+```env
+VITE_API_URL=http://localhost:5000/api
+```
 
-   `npm run dev`
+5. Start the development server.
 
-## API Endpoints
+```bash
+npm run dev
+```
 
-### Authentication
+6. Open the URL displayed in your terminal.
 
-| Method | Endpoint |
-|---|---|
-| POST | /api/auth/register |
-| POST | /api/auth/login |
+## Backend Setup
 
-### Tasks (JWT required)
+Start the backend separately.
 
-| Method | Endpoint |
-|---|---|
-| POST | /api/tasks |
-| GET | /api/tasks |
-| GET | /api/tasks/:id |
-| PUT | /api/tasks/:id |
-| DELETE | /api/tasks/:id |
+Configure its MongoDB connection and JWT secret in its `.env` file, then run:
 
-## Authentication
+```bash
+npm install
+npm run dev
+```
 
-For protected routes, include:
+Make sure the backend is running on port 5000.
 
-`Authorization: Bearer YOUR_JWT_TOKEN`
+## Build
 
-## License
+To create a production build:
 
-ISC
+```bash
+npm run build
+```
+
+## Author
+
+Abdul Aziz
